@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Sentiment Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Review Sentiment Analyzer</h1>
+        <p class="subtitle">Analyze the sentiment of product reviews</p>
+        
+        <div class="input-section">
+            <textarea id="reviewInput" placeholder="Enter a product review here..."></textarea>
+            <button id="analyzeBtn">Analyze Sentiment</button>
+        </div>
+        
+        <div id="result" class="result hidden">
+            <div class="sentiment-display">
+                <div class="sentiment-icon" id="sentimentIcon"></div>
+                <h2 id="sentimentLabel"></h2>
+                <p id="confidenceScore"></p>
+            </div>
+            
+            <div class="details">
+                <div class="detail-card">
+                    <h3>Positive Words</h3>
+                    <p id="positiveWords">-</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Negative Words</h3>
+                    <p id="negativeWords">-</p>
+                </div>
+            </div>
+            
+            <div class="score-bars">
+                <div class="score-bar">
+                    <label>Positive</label>
+                    <div class="bar">
+                        <div class="bar-fill positive" id="positiveBar"></div>
+                    </div>
+                    <span id="positivePercent">0%</span>
+                </div>
+                <div class="score-bar">
+                    <label>Neutral</label>
+                    <div class="bar">
+                        <div class="bar-fill neutral" id="neutralBar"></div>
+                    </div>
+                    <span id="neutralPercent">0%</span>
+                </div>
+                <div class="score-bar">
+                    <label>Negative</label>
+                    <div class="bar">
+                        <div class="bar-fill negative" id="negativeBar"></div>
+                    </div>
+                    <span id="negativePercent">0%</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="examples">
+            <h3>Try these examples:</h3>
+            <button class="example-btn" data-text="This product is absolutely amazing! Best purchase ever. Highly recommend!">Positive Review</button>
+            <button class="example-btn" data-text="Terrible quality. Broke after one day. Complete waste of money.">Negative Review</button>
+            <button class="example-btn" data-text="The product arrived on time. It works as described.">Neutral Review</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
